@@ -6,7 +6,7 @@ public class CalendarTest {
 		int month = date.getMonthValue();
 		int today = date.getDayOfMonth();
 
-		date = date.minusDays(today - 1); // 设置date成本月一号
+		date = date.minusDays(today - 1); // 生成当前日期之前today-1天，即设置date成本月一号
 		DayOfWeek weekday = date.getDayOfWeek(); // 查看date是礼拜几
 		int value = weekday.getValue(); // 周一就是1......周日就是7
 
@@ -20,7 +20,7 @@ public class CalendarTest {
 				System.out.print("*");
 			else
 				System.out.print(" ");
-			date = date.plusDays(1);
+			date = date.plusDays(1);//生成当前日期之后1天
 			if (date.getDayOfWeek().getValue() == 1)
 				System.out.println();
 		}
